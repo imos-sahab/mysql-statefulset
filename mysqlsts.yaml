@@ -160,9 +160,10 @@ spec:
           name: mysql
   volumeClaimTemplates:
   - metadata:
-      name: oci-bv
+      name: mysql-store
     spec:
       accessModes: ["ReadWriteOnce"]
+      storageClassName: "oci-bv"
       resources:
         requests:
           storage: 10Gi
